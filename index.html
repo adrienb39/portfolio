@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="fr-FR">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,135 +9,517 @@
     <meta name="keywords" content="">
     <meta name="google-site-verification" content="4KD8RYzbErBNpMBukd0ovANlMzrL5wO0kzmXgyOS-94" />
     <title>Portfolio - Adrien Bruyere</title>
-    <link rel="stylesheet" href="style.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
-    <script src="menu.js" defer></script>
-    <script src=
-    "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
-    </script>
+    <!--===== Font Awesome =====-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--===== Main CSS =====-->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <!-- menu -->
-  <div class="container">
-    <nav>
-      <div class="mobile-nav">
-        <span>Adrien Bruyere</span>
-        <div class="nav-btn">
-          <i class="fas fa-bars"></i>
+    <!--===== Navbar Start =====-->
+    <nav class="navbar">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="logo"><a href="index.html">Adrien Bruyere<span></span></a></div>
+                <div class="links">
+                    <ul class="menu">
+                        <li class="nav-item"><a href="#home" class="nav-link active">Accueil <span></span></a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">À propos <span></span></a></li>
+                        <li class="nav-item"><a href="#skills" class="nav-link">Compétences <span></span></a></li>
+                        <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio <span></span></a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contact <span></span></a></li>
+                    </ul>
+                </div>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
         </div>
-      </div>
-      <div>
-      <ul class="nav">
-        <h1 class="title"><a class="title-lien" href="index.html">Adrien Bruyere</a></h1>
-        <li class="dropdown"><a href="cv/cv.html">CV</a></li>
-        <li class="dropdown">
-          <a href="#">Certifications</a>
-          <ul>
-            <li><a href="certifications/certification-pix.html">PIX</a></li>
-            <li><a href="certifications/certification-cnil.html">CNIL</a></li>
-            <li><a href="certifications/certification-anssi.html">ANSSI</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Projets</a>
-          <ul>
-            <li><a href="projets/site-web.html">Site Web</a></li>
-          </ul>
-        </li>
-        <li class="dropdown"><a href="veille-technologique/veille-technologique.html">Veille technologique</a></li>
-        <li class="dropdown">
-          <a href="#">Expériences professionnelles</a>
-          <ul>
-            <li><a href="experiences-professionnelles/stages.html">Stages</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Passions</a>
-          <ul>
-            <li><a href="passions/astronomie.html">Astronomie</a></li>
-            <li><a href="passions/meteorologie.html">Météorologie</a></li>
-          </ul>
-        </li>
-      </ul>
-      </div>
     </nav>
-  </div>
-  <!-- contenu principal -->
-  <div>
-    <div class="blc-principal">
-      <div class="blc-cv">
-        <a class="title-cv" href="cv/cv.html">CV</a>
-        <p class="p-cv">Ce site comprend une page dédiée pour le CV</p>
-        <a href="ressources/CVADRIENBRUYERE.pdf" target="_blank"><div class="blc-cv-container"></div></a>
-      </div>
-      <div class="blc-certifications">
-        <a class="title-certifications" href="certifications/">Certifications</a>
-        <p class="p-certifications">Ce site comprend une page dédiée pour les certifications</p>
-        <div class="blc-certifications-container"></div>
-      </div>
+    <!--===== Navbar End =====-->
+    <!--===== Home Section Start =====-->
+    <section class="home-section" id="home">
+        <ul class="header-social"> <!--===== Header Social =====-->
+            <li><a href="https://github.com/adrienb39/"><i class="fa-brands fa-github"></i></a></li>
+        </ul>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="home-text">
+                    <h4>Bienvenue</h4>
+                    <h1>Adrien Bruyere</h1>
+                    <span>Etudiant en informatique en BTS SIO</span>
+                    <p>Ce site Web comporte des informations sur les compétences, ainsi qu'un portfolio.
+                    </p>
+                    <a href="#portfolio" class="btn btn-1">Portfolio</a>
+                </div>
+                <div class="home-image">
+                    <div class="img-box">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-hero-shape"></div> <!--===== Hero Shape =====-->
+    </section>
+    <!--===== Home Section End =====-->
+    <!--===== About Section Start =====-->
+    <section class="about-section section-padding" id="about">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="about-image">
+                    <div class="img-box">
+                        <h1>De nature autodidacte et indépendant dans mon travail, j’aime apprendre de nouvelles
+                            technologies, passer du temps à résoudre des problèmes et réaliser du code de qualité.</h1>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="section-title">
+                        <h5 class="sub-title">À propos</h5>
+                        <h3 class="main-title">Pourquoi m'embaucher ?</h3>
+                        <ul class="line">
+                            <li></li>
+                        </ul>
+                    </div> <!--===== Section Title =====-->
+                    <p>Cet endroit permet d'identifier les niveaux pour chaque compétence informatique.</p>
+                    <h1>BASE DE DONNÉES</h1>
+                    <div class="about-skills">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h6 class="skill-title">Langages : SQL</h6>
+                                <div class="skill-percentage">
+                                    <p><span class="counter">20</span>%</p>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="bar-inner">
+                                    <div class="bar progress-line" data-progress="20%"></div>
+                                </div>
+                            </div>
+                        </div> <!--===== Skill Item =====-->
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h6 class="skill-title">Serveurs : MySQL/MariaDB SQL Server</h6>
+                                <div class="skill-percentage">
+                                    <p><span class="counter">100</span>%</p>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="bar-inner">
+                                    <div class="bar progress-line" data-progress="100%"></div>
+                                </div>
+                            </div>
+                        </div> <!--===== Skill Item =====-->
+                        <h1>DÉVELOPPEMENT LOGICIEL</h1>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h6 class="skill-title">Développement Web : PHP 8, HTML5,
+                                    CSS3, Bootstrap</h6>
+                                <div class="skill-percentage">
+                                    <p><span class="counter">98</span>%</p>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="bar-inner">
+                                    <div class="bar progress-line" data-progress="98%"></div>
+                                </div>
+                            </div>
+                        </div> <!--===== Skill Item =====-->
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h6 class="skill-title">Développement Objet</h6>
+                                <div class="skill-percentage">
+                                    <p><span class="counter">70</span>%</p>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="bar-inner">
+                                    <div class="bar progress-line" data-progress="70%"></div>
+                                </div>
+                            </div>
+                        </div> <!--===== Skill Item =====-->
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h6 class="skill-title">Environnement de Développement :
+                                    Cybersécurité Appliqué au
+                                    Développement Web</h6>
+                                <div class="skill-percentage">
+                                    <p><span class="counter">80</span>%</p>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="bar-inner">
+                                    <div class="bar progress-line" data-progress="80%"></div>
+                                </div>
+                            </div>
+                        </div> <!--===== Skill Item =====-->
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h6 class="skill-title">Linux / Windows</h6>
+                                <div class="skill-percentage">
+                                    <p><span class="counter">100</span>%</p>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="bar-inner">
+                                    <div class="bar progress-line" data-progress="100%"></div>
+                                </div>
+                            </div>
+                        </div> <!--===== Skill Item =====-->
+                        <h1>BUREAUTIQUE</h1>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h6 class="skill-title">Maîtrise du pack office</h6>
+                                <div class="skill-percentage">
+                                    <p><span class="counter">100</span>%</p>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="bar-inner">
+                                    <div class="bar progress-line" data-progress="100%"></div>
+                                </div>
+                            </div>
+                        </div> <!--===== Skill Item =====-->
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h6 class="skill-title">LibreOffice</h6>
+                                <div class="skill-percentage">
+                                    <p><span class="counter">100</span>%</p>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="bar-inner">
+                                    <div class="bar progress-line" data-progress="100%"></div>
+                                </div>
+                            </div>
+                        </div> <!--===== Skill Item =====-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--===== About Section End =====-->
+    <!--===== Skill Section Start =====-->
+    <section class="skill-section section-padding" id="skills">
+        <div class="container">
+            <div class="row">
+                <div class="section-title text-align">
+                    <h5 class="sub-title">Compétences</h5>
+                    <h3 class="main-title">Description des compétences</h3>
+                    <ul class="line">
+                        <li></li>
+                    </ul>
+                </div> <!--===== Skill Title =====-->
+            </div>
+            <div class="row">
+                <!--===== Skill Item Start =====-->
+                <div class="skill-item">
+                    <div class="skill-item-inner">
+                        <div class="icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Conception réactive</h3>
+                        <p>Le design responsive est une approche de la conception web qui permet d’adapter votre contenu
+                            web aux différentes tailles d’écran et de fenêtre d’une variété d’appareils.</p>
+                    </div>
+                </div>
+                <!--===== Skill Item End =====-->
+                <!--===== Skill Item Start =====-->
+                <div class="skill-item">
+                    <div class="skill-item-inner">
+                        <div class="icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Conception de sites web</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <!--===== Skill Item End =====-->
+                <!--===== Skill Item Start =====-->
+                <div class="skill-item">
+                    <div class="skill-item-inner">
+                        <div class="icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Conception graphique</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <!--===== Skill Item End =====-->
+                <!--===== Skill Item Start =====-->
+                <div class="skill-item">
+                    <div class="skill-item-inner">
+                        <div class="icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Code propre</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <!--===== Skill Item End =====-->
+                <!--===== Skill Item Start =====-->
+                <div class="skill-item">
+                    <div class="skill-item-inner">
+                        <div class="icon">
+                            <i class="fa-brands fa-dev"></i>
+                        </div>
+                        <h3>Full stack</h3>
+                        <p>Front-end et back-end</p>
+                    </div>
+                </div>
+                <!--===== Skill Item End =====-->
+                <!--===== Skill Item Start =====-->
+                <div class="skill-item">
+                    <div class="skill-item-inner">
+                        <div class="icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3>Grand soutien</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <!--===== Skill Item End =====-->
+            </div>
+        </div>
+    </section>
+    <!--===== Skill Section End =====-->
+    <!--===== Portfolio Section Start =====-->
+    <section class="portfolio section-padding" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="section-title text-align">
+                    <h5 class="sub-title">portfolio</h5>
+                    <h3 class="main-title"></h3>
+                    <ul class="line">
+                        <li></li>
+                    </ul>
+                </div> <!--===== Section Title =====-->
+            </div>
+            <div class="row">
+                <div class="portfolio-filter">
+                    <button type="button" class="active" data-filter="all">Tous</button>
+                    <button type="button" data-filter="cv">CV</button>
+                    <button type="button" data-filter="certifications">Certifications</button>
+                    <button type="button" data-filter="projets">Projets</button>
+                    <button type="button" data-filter="veille-technologique">Veille technologique</button>
+                    <button type="button" data-filter="experiences-professionnelles">Experiences
+                        professionnelles</button>
+                    <button type="button" data-filter="passions">Passions</button>
+                </div>
+            </div>
+            <div class="row">
+                <!--===== portfolio-item start =====-->
+                <div class="portfolio-item" data-category="cv">
+                    <div class="portfolio-item-inner">
+                        <div class="portfolio-img">
+                            <img src="ressources/portfolio/CVADRIENBRUYERE.png" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>CV</h4>
+                            <div class="icon">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="ressources/portfolio/CVADRIENBRUYERE.pdf" target="_blank">Voir le CV</a>
+                </div>
+                <!--===== portfolio-item end =====-->
+                <!--===== portfolio-item start =====-->
+                <div class="portfolio-item" data-category="certifications">
+                    <div class="portfolio-item-inner">
+                        <div class="portfolio-img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>certifications</h4>
+                            <div class="icon">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--===== portfolio-item end =====-->
+                <!--===== portfolio-item start =====-->
+                <div class="portfolio-item" data-category="projets">
+                    <div class="portfolio-item-inner">
+                        <div class="portfolio-img">
+                            <img src="ressources/portfolio/site-web-meteastro.png" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>projets - Site Web</h4>
+                            <div class="icon">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="http://adrien.digitaledeluxe.fr" target="_blank">Voir le site Web Meteastro</a>
+                </div>
+                <!--===== portfolio-item end =====-->
+                <!--===== portfolio-item start =====-->
+                <div class="portfolio-item" data-category="projets">
+                    <div class="portfolio-item-inner">
+                        <div class="portfolio-img">
+                            <img src="ressources/portfolio/site-web-gestimag.png" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>projets - Site Web</h4>
+                            <div class="icon">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <a href="">Voir le site Web Gestimag</a> -->
+                </div>
+                <!--===== portfolio-item end =====-->
+                <!--===== portfolio-item start =====-->
+                <div class="portfolio-item" data-category="veille-technologique">
+                    <div class="portfolio-item-inner">
+                        <div class="portfolio-img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>veille-technologique</h4>
+                            <div class="icon">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--===== portfolio-item end =====-->
+                <!--===== portfolio-item start =====-->
+                <div class="portfolio-item" data-category="experiences-professionnelles">
+                    <div class="portfolio-item-inner">
+                        <div class="portfolio-img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>experiences professionnelles</h4>
+                            <div class="icon">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--===== portfolio-item end =====-->
+                <!--===== portfolio-item start =====-->
+                <div class="portfolio-item" data-category="Passions">
+                    <div class="portfolio-item-inner">
+                        <div class="portfolio-img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>passions</h4>
+                            <div class="icon">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--===== portfolio-item end =====-->
+            </div>
+        </div>
+    </section>
+    <!--===== Portfolio Section End =====-->
+    <!--===== Contact Section Start =====-->
+    <section class="contact-section section-padding" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="section-title text-align">
+                    <h5 class="sub-title">contact</h5>
+                    <h3 class="main-title"></h3>
+                    <ul class="line">
+                        <li></li>
+                    </ul>
+                </div> <!--===== Section Title =====-->
+            </div>
+            <div class="row">
+                <!--===== contact item start =====-->
+                <div class="contact-item">
+                    <div class="contact-item-inner">
+                        <i class="fas fa-phone"></i>
+                        <span>Téléphone</span>
+                        <p>0602436562</p>
+                    </div>
+                </div>
+                <!--===== contact item end =====-->
+                <!--===== contact item start =====-->
+                <div class="contact-item">
+                    <div class="contact-item-inner">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                        <p>adrienb39@yahoo.com</p>
+                    </div>
+                </div>
+                <!--===== contact item end =====-->
+                <!--===== contact item start =====-->
+                <div class="contact-item">
+                    <div class="contact-item-inner">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Adresse</span>
+                        <p>22 rue du Clou, 39330 Pagnoz</p>
+                    </div>
+                </div>
+                <!--===== contact item end =====-->
+            </div>
+            <!--===== Contact Form =====-->
+            <div class="row">
+                  <div class="contact-form">
+                      <form action="">
+                          <div class="row">
+                              <div class="w-50">
+                                  <div class="input-group">
+                                      <input type="text" placeholder="Nom" class="input-control">
+                                  </div>
+                                  <div class="input-group">
+                                    <input type="email" placeholder="Email" class="input-control">
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" placeholder="Sujet" class="input-control">
+                                </div>
+                              </div>
+                              <div class="w-50">
+                                  <div class="input-group">
+                                      <textarea name="" class="input-control" placeholder="Message" id="" cols="30" rows="10"></textarea>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="submit-btn">
+                                  <button type="submit" class="btn-1">Envoyé le message</button>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+        </div>
+    </section>
+    <!--===== Contact Section End =====-->
+    <!--===== Footer Section Start =====-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-center">
+                <p class="copyright-text">&copy; Portfolio 2023-2024</p>
+            </div>
+        </div>
+    </footer>
+    <!--===== Footer Section End =====-->
+    <!--===== Lightbox Start =====-->
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <div class="lightbox-close">&times;</div>
+            <img src="" onclick="nextItem()" class="lightbox-img" alt="">
+            <div class="lightbox-caption">
+                <div class="caption-text"></div>
+                <div class="caption-counter"></div>
+            </div>
+        </div>
+        <div class="lightbox-controls">
+            <div class="prev-item" onclick="prevItem()"><i class="fa fa-angle-left"></i></div>
+            <div class="next-item" onclick="nextItem()"><i class="fa fa-angle-right"></i></div>
+        </div>
     </div>
-    <div class="blc-principal">
-      <div class="blc-projets">
-        <a class="title-projets" href="projets/">Projets</a>
-        <p class="p-projets">Ce site comprend une page dédiée pour les projets</p>
-        <div class="blc-projets-container"></div>
-      </div>
-      <div class="blc-veille-technologique">
-        <a class="title-veille-technologique" href="veille-technologique/">Veille technologique</a>
-        <p class="p-veille-technologique">Ce site comprend une page dédiée pour la veille technologique</p>
-        <div class="blc-veille-technologique-container"></div>
-      </div>
-    </div>
-    <div class="blc-principal">
-      <div class="blc-experiences-professionnelles">
-        <a class="title-experiences-professionnelles" href="experiences-professionnelles/">Experiences professionnelles</a>
-        <p class="p-experiences-professionnelles">Ce site comprend une page dédiée pour les experiences professionnelles</p>
-        <div class="blc-experiences-professionnelles-container"></div>
-      </div>
-      <div class="blc-passions">
-        <a class="title-passions" href="passions/">Passions</a>
-        <p class="p-passions">Ce site comprend une page dédiée pour les passions</p>
-        <div class="blc-passions-container"></div>
-      </div>
-    </div>
-  </div>
-  <!-- footer -->
-  <footer>
-    <p class="footer_block">
-        <!-- Nom du Site Web: <b>Meteastro</b><br>
-        Site Web créer par: <b>Adrien Bruyère</b><br> -->
-    </p>
-    <p class="footer_block">
-        <!-- Site Web créer le: <b>Vendredi 8 Avril 2022</b><br>
-        Dernière mise à jour du Site Web: <b>Samedi 1 Juillet 2023</b><br>
-        Version du Site Web: <b>1.0</b><br> -->
-    </p>
-
-    <div class="mode">
-    mode sombre:            
-    <span class="change">OFF</span>
-  </div>
-
-</footer>
-
-<script>
-$( ".change" ).on("click", function() {
-  if( $( "body" ).hasClass( "dark" )) {
-      $( "body" ).addClass( "light" );
-      $( "body" ).removeClass( "dark" );
-      $( "footer" ).addClass( "dark-footer" );
-      $( "footer" ).removeClass( "light-footer" );
-      $( ".change" ).text( "OFF" );
-  } else {
-      $( "body" ).hasClass( "light" )
-      $( "body" ).removeClass( "light" );
-      $( "body" ).addClass( "dark" );
-      $( "footer" ).hasClass( "dark-footer" )
-      $( "footer" ).removeClass( "dark-footer" );
-      $( "footer" ).addClass( "light-footer" );
-      $( ".change" ).text( "ON" );
-  }
-});
-</script>
+    <!--===== Lightbox End =====-->
+    <!--===== Main JS =====-->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
