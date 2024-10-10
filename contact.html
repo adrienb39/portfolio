@@ -147,7 +147,7 @@
 
         </div>
 
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
+        <form id="contactForm" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
           <div class="row gy-4">
 
             <div class="col-md-6">
@@ -221,6 +221,32 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    (function() {
+      emailjs.init('ZuadaIoeeM_l1ednJ'); // Remplacez par votre ID utilisateur EmailJS
+
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        const data = {
+          name: formData.get('name'),
+          email: formData.get('email'),
+          subject: formData.get('subject'),
+          message: formData.get('message')
+        };
+
+        emailjs.send('service_8cio9eg', 'template_bg7vabx', data)
+                .then(function(response) {
+                  document.getElementById('responseMessage').innerText = 'Email envoyé avec succès !';
+                  document.getElementById('contactForm').reset(); // Réinitialiser le formulaire après l'envoi
+                }, function(error) {
+                  document.getElementById('responseMessage').innerText = 'Erreur : ' + JSON.stringify(error);
+                });
+      });
+    })();
+  </script>
 
 </body>
 

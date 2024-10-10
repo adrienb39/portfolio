@@ -608,7 +608,10 @@ var init = function init(settings) {
 var aos = {
   init: init,
   refresh: refresh,
-  refreshHard: refreshHard
+  refreshHard: refreshHard,
+    send(yourserviceid, yourtemplateid, data) {
+        
+    }
 };
 
 module.exports = aos;

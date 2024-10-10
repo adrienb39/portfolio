@@ -46,7 +46,23 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="about.html" class="active">À propos</a></li>
+          <li class="dropdown"><a href="about.html" class="active"><span>À propos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li class="dropdown"><a href=""><span>Certifications</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="">PIX</a></li>
+                  <li><a href="">CNIL</a></li>
+                  <li><a href="">ANSSI</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href=""><span>Passions</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="">Astronomie</a></li>
+                  <li><a href="">Météorologie</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
           <li><a href="resume.html">CV</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="project.html">Projets</a></li>
@@ -131,7 +147,7 @@
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Âge :</strong> <span>18</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Âge :</strong> <span>19</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Diplôme en cours:</strong> <span>BTS</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email :</strong> <span>adrienb39@yahoo.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance :</strong> <span>Disponible</span></li>
@@ -302,6 +318,46 @@
       </div>
 
     </section><!-- /Interests Section -->
+
+    <!-- Certification Section -->
+    <section id="certification" class="certification section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Certifications</h2>
+        <div><span>Certifications</span> <span class="description-title">par catégorie</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="features-item">
+              <i class="fa-brands fa-pix" style="color: #ffbb2c; height: 2em; margin-right: 10px;"></i>
+              <h3><a href="" class="stretched-link">PIX</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="features-item">
+              <i class="fa-solid fa-file-shield" style="color: #ffbb2c; height: 2em; margin-right: 10px;"></i>
+              <h3><a href="" class="stretched-link">CNIL</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="features-item">
+              <i class="fa-solid fa-shield" style="color: #ffbb2c; height: 2em; margin-right: 10px;"></i>
+              <h3><a href="" class="stretched-link">ANSSI</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Certification Section -->
 
   </main>
 
