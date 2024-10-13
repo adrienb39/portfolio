@@ -105,18 +105,18 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="services-list">
-              <a href="#" class="active">Web Design</a>
-              <a href="#">Software Development</a>
-              <a href="#">Product Management</a>
-              <a href="#">Graphic Design</a>
-              <a href="#">Marketing</a>
+              <a href="#" class="active" data-service="web-design">Web Design</a>
+              <a href="#" data-service="software-development">Software Development</a>
+              <a href="#" data-service="product-management">Product Management</a>
+              <a href="#" data-service="graphic-design">Graphic Design</a>
+              <a href="#" data-service="marketing">Marketing</a>
             </div>
 
             <h4>Enim qui eos rerum in delectus</h4>
             <p>Nam voluptatem quasi numquam quas fugiat ex temporibus quo est. Quia aut quam quod facere ut non occaecati ut aut. Nesciunt mollitia illum tempore corrupti sed eum reiciendis. Maxime modi rerum.</p>
           </div>
 
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200" id="service-content">
             <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
             <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
             <p>
@@ -181,6 +181,68 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+ <script>
+  // Initialisation de AOS
+  AOS.init({
+    duration: 1000, // Durée de l'animation
+    once: true, // Ne joue l'animation qu'une seule fois
+  });
+
+  const services = {
+    "web-design": `
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200" id="service-content">
+            <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+            <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
+            <p>
+              Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+            </ul>
+            <p>
+              Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+            </p>
+            <p>
+              Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+            </p>
+          </div>
+    `,
+    "software-development": `
+      <img src="assets/img/software-development.jpg" alt="" class="img-fluid services-img" data-aos="zoom-in">
+      <h3 data-aos="fade-left">Software Development</h3>
+      <p data-aos="fade-right">Description du développement logiciel...</p>
+      <ul>
+        <li data-aos="fade-up"><i class="bi bi-check-circle"></i> <span>Solution innovante.</span></li>
+        <li data-aos="fade-up" data-aos-delay="100"><i class="bi bi-check-circle"></i> <span>Approche agile.</span></li>
+        <li data-aos="fade-up" data-aos-delay="200"><i class="bi bi-check-circle"></i> <span>Support technique.</span></li>
+      </ul>
+      <p>Autres détails...</p>
+    `,
+    // Ajoutez d'autres services ici...
+  };
+
+  document.querySelectorAll('.services-list a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const serviceKey = this.getAttribute('data-service');
+      const content = services[serviceKey];
+
+      // Remplacer le contenu
+      document.getElementById('service-content').innerHTML = content;
+
+      // Optionnel : mettre à jour l'élément actif
+      document.querySelector('.services-list a.active').classList.remove('active');
+      this.classList.add('active');
+
+      // Re-initialiser AOS pour le nouveau contenu
+      AOS.refresh();
+    });
+  });
+</script>
+
 
 </body>
 
