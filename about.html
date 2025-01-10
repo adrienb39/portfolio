@@ -44,48 +44,7 @@
       </a>
 
       <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li class="dropdown"><a href="about.html" class="active"><span>À propos</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li class="dropdown"><a href=""><span>Certifications</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="">PIX</a></li>
-                  <li><a href="">CNIL</a></li>
-                  <li><a href="">ANSSI</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href=""><span>Passions</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="">Astronomie</a></li>
-                  <li><a href="">Météorologie</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="resume.html">CV</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="project.html">Projets</a></li>
-          <li class="dropdown"><a href="technology-watch.html"><span>Veille technologique</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="technology-watch/technology-watch-details-linux.html">Linux</a></li>
-              <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li> -->
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
@@ -300,6 +259,19 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    // Charger le contenu du menu depuis header.html
+    fetch('src/header.html')
+      .then(response => response.text())
+      .then(data => {
+        // Insérer le contenu dans l'élément avec l'id 'navmenu'
+        document.getElementById('navmenu').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Erreur de chargement du menu:', error);
+      });
+  </script>
 
 </body>
 
