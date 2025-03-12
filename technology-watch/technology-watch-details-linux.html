@@ -41,7 +41,7 @@
         <h1 class="sitename">Adrien Bruyere</h1>
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu-submenu" class="navmenu">
         
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -156,11 +156,11 @@
   <!-- <script src="/assets/js/header.js"></script> -->
   <script>
     // Charger le contenu du menu depuis header.html
-    fetch('../src/header.html')
+    fetch('../src/header-submenu.html')
       .then(response => response.text())
       .then(data => {
         // Insérer le contenu dans l'élément avec l'id 'navmenu'
-        document.getElementById('navmenu').innerHTML = data;
+        document.getElementById('navmenu-submenu').innerHTML = data;
       })
       .catch(error => {
         console.error('Erreur de chargement du menu:', error);
