@@ -13,7 +13,9 @@
 
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/bootstrap-icons.min.css" rel="stylesheet">
@@ -38,7 +40,7 @@
       </a>
 
       <nav id="navmenu" class="navmenu">
-        
+
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
@@ -49,7 +51,9 @@
     <section id="hero" class="hero section">
       <div class="container" data-aos="zoom-out" data-aos-delay="100">
         <h2>Adrien Bruyere</h2>
-        <p>Je suis <span class="typed" data-typed-items="étudiant en informatique en BTS SIO, en BTS SIO SLAM (développement)">étudiant en informatique en BTS SIO</span><span class="typed-cursor typed-cursor--blink"></span></p>
+        <p>Je suis <span class="typed"
+            data-typed-items="étudiant en informatique en BTS SIO, en BTS SIO SLAM (développement)">étudiant en
+            informatique en BTS SIO</span><span class="typed-cursor typed-cursor--blink"></span></p>
         <div class="social-links">
           <a href="https://github.com/adrienb39"><i class="fa-brands fa-github"></i></a>
         </div>
@@ -76,7 +80,8 @@
     </div>
   </footer>
 
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
 
@@ -94,7 +99,19 @@
 
   <script src="assets/js/main.js"></script>
 
-  <script src="assets/js/header.js"></script>
+  <!-- <script src="assets/js/header.js"></script> -->
+  <script>
+    // Charger le contenu du menu depuis header.html
+    fetch('src/header.html')
+      .then(response => response.text())
+      .then(data => {
+        // Insérer le contenu dans l'élément avec l'id 'navmenu'
+        document.getElementById('navmenu').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Erreur de chargement du menu:', error);
+      });
+  </script>
 
   <script>
     if (window.matchMedia) {
