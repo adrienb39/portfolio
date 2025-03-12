@@ -15,7 +15,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -42,7 +44,7 @@
       </a>
 
       <nav id="navmenu" class="navmenu">
-        
+
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
@@ -179,7 +181,8 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -199,61 +202,73 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script src="assets/js/header.js"></script>
+  <!-- <script src="assets/js/header.js"></script> -->
+  <script>
+    // Charger le contenu du menu depuis header.html
+    fetch('src/header.html')
+      .then(response => response.text())
+      .then(data => {
+        // Insérer le contenu dans l'élément avec l'id 'navmenu'
+        document.getElementById('navmenu').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Erreur de chargement du menu:', error);
+      });
+  </script>
 
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-<script>
-(function () {
-  "use strict";
+  <script>
+    (function () {
+      "use strict";
 
-  emailjs.init('ZuadaIoeeM_l1ednJ'); // Remplacez par votre ID utilisateur
+      emailjs.init('ZuadaIoeeM_l1ednJ'); // Remplacez par votre ID utilisateur
 
-  let forms = document.querySelectorAll('.php-email-form');
+      let forms = document.querySelectorAll('.php-email-form');
 
-  forms.forEach(function (form) {
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
+      forms.forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
 
-      let thisForm = this;
+          let thisForm = this;
 
-      thisForm.querySelector('.loading').classList.add('d-block');
-      thisForm.querySelector('.error-message').classList.remove('d-block');
-      thisForm.querySelector('.sent-message').classList.remove('d-block');
+          thisForm.querySelector('.loading').classList.add('d-block');
+          thisForm.querySelector('.error-message').classList.remove('d-block');
+          thisForm.querySelector('.sent-message').classList.remove('d-block');
 
-      let formData = new FormData(thisForm);
-      const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        subject: formData.get('subject'),
-        message: formData.get('message')
-      };
+          let formData = new FormData(thisForm);
+          const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            subject: formData.get('subject'),
+            message: formData.get('message')
+          };
 
-      emailjs.send('service_meqxl4u', 'template_bg7vabx', data)
-        .then(function (response) {
-          console.log('Email envoyé avec succès!', response);
-          thisForm.querySelector('.loading').classList.remove('d-block');
-          thisForm.querySelector('.sent-message').classList.add('d-block');
-          thisForm.reset();
-        }, function (error) {
-          console.error('Erreur lors de l\'envoi de l\'email:', error);
-          displayError(thisForm, 'Une erreur s\'est produite. Veuillez réessayer.');
+          emailjs.send('service_meqxl4u', 'template_bg7vabx', data)
+            .then(function (response) {
+              console.log('Email envoyé avec succès!', response);
+              thisForm.querySelector('.loading').classList.remove('d-block');
+              thisForm.querySelector('.sent-message').classList.add('d-block');
+              thisForm.reset();
+            }, function (error) {
+              console.error('Erreur lors de l\'envoi de l\'email:', error);
+              displayError(thisForm, 'Une erreur s\'est produite. Veuillez réessayer.');
+            });
         });
-    });
-  });
+      });
 
-  function displayError(thisForm, error) {
-    thisForm.querySelector('.loading').classList.remove('d-block');
-    thisForm.querySelector('.error-message').innerHTML = error;
-    thisForm.querySelector('.error-message').classList.add('d-block');
-  }
+      function displayError(thisForm, error) {
+        thisForm.querySelector('.loading').classList.remove('d-block');
+        thisForm.querySelector('.error-message').innerHTML = error;
+        thisForm.querySelector('.error-message').classList.add('d-block');
+      }
 
-})();
-</script>
+    })();
+  </script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
-    (function(){
+    (function () {
       emailjs.init({
         publicKey: "ZuadaIoeeM_l1ednJ", // Replace with your public key
       });

@@ -111,7 +111,8 @@
                   <li><i class="bi bi-chevron-right"></i> <strong>Diplôme en cours:</strong> <span>BTS</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email :</strong> <span>adrienb39@yahoo.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance :</strong> <span>Disponible</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Micro-entreprise :</strong> <span><a class="text-white" href="https://www.devmetastra.fr/">DevMetAstra</a></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Micro-entreprise :</strong> <span><a
+                        class="text-white" href="https://www.devmetastra.fr/">DevMetAstra</a></span></li>
                 </ul>
               </div>
             </div>
@@ -262,7 +263,19 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script src="assets/js/header.js"></script>
+  <!-- <script src="assets/js/header.js"></script> -->
+  <script>
+    // Charger le contenu du menu depuis header.html
+    fetch('src/header.html')
+      .then(response => response.text())
+      .then(data => {
+        // Insérer le contenu dans l'élément avec l'id 'navmenu'
+        document.getElementById('navmenu').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Erreur de chargement du menu:', error);
+      });
+  </script>
 
 </body>
 
