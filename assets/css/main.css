@@ -1279,9 +1279,10 @@ section,
   font-size: 14px;
   padding: 5px 10px;
   font-weight: 400;
-  color: #ffffff;
+  color: black;
   display: inline-block;
   background-color: var(--accent-color);
+  border-radius: 12px;
 }
 
 .portfolio .portfolio-content .portfolio-info p {
