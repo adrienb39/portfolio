@@ -49,13 +49,31 @@
 
   <main class="main">
     <section id="hero" class="hero section">
-      <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <div class="container" style="overflow: hidden; font-size: 1.2rem; line-height: 2em;">
         <h2>Adrien Bruyere</h2>
-        <p>Je suis <span class="typed"
-            data-typed-items="étudiant en informatique en BTS SIO, en BTS SIO SLAM (développement)">étudiant en
-            informatique en BTS SIO</span><span class="typed-cursor typed-cursor--blink"></span></p>
-        <div class="social-links">
-          <a href="https://github.com/adrienb39"><i class="fa-brands fa-github"></i></a>
+        <div class="d-flex">
+          <p class="me-2" style="display: flex; align-items: center; height: 2em; overflow: hidden; max-width: 600px;">
+            Je suis
+          <div id="scrolling-text" style="overflow: hidden; height: 2em; position: relative; flex-shrink: 0;">
+            <div id="phrases" style="position: relative; top: 0; transition: top 0.5s ease-in-out;">
+              <div style="height: 2em; white-space: nowrap;">
+                <p style="font-size: 26px;">
+                  à la recherche d'un emploi en tant que développeur informatique en CDI.
+                </p>
+              </div>
+              <div style="height: 2em; white-space: nowrap;">
+                <p style="font-size: 26px;">
+                  à la recherche d'un emploi en CDI à Paris.
+                </p>
+              </div>
+              <div style="height: 2em; white-space: nowrap;">
+                <p style="font-size: 26px;">
+                  à la recherche d'un emploi en CDI à Lyon, ....
+                </p>
+              </div>
+            </div>
+          </div>
+          </p>
         </div>
       </div>
     </section>
@@ -98,6 +116,17 @@
   <script src="assets/font-awesome/js/all.min.js"></script>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    const phrases = document.querySelectorAll('#phrases > div');
+    const container = document.getElementById('phrases');
+    let index = 0;
+    const phraseHeight = 42; // correspond environ à 2em en pixels (ajuste si besoin)
+
+    setInterval(() => {
+      index = (index + 1) % phrases.length;
+      container.style.top = `-${index * phraseHeight}px`;
+    }, 3000);
+  </script>
 
   <!-- <script src="assets/js/header.js"></script> -->
   <script>
