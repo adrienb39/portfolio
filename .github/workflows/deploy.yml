@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: fedora
+    runs-on: ubuntu-latest
     steps:
       - name: Extraire votre dépôt à l'aide de git
         uses: actions/checkout@v4
@@ -31,7 +31,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: fedora
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
